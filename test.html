@@ -8,17 +8,7 @@
 	</head>
 	
 	<body>
-		<div id="interface">
-			<div id="interface_window">
-				<div id="interface_render">
-					<canvas id="interface_cg" width="100%" height="100%"></canvas>
-				</div>
-				
-				<div id="interface_dialog">
-					<!-- <img src="Assets/adjusted/dialog.png" alt="dialog"> -->
-				</div>
-			</div>
-		</div>
+					<canvas id="interface_cg" width="1280" height="800"></canvas>
 					
 	</body>
 	
@@ -26,13 +16,22 @@
 		<script>
 
             window.onload = function(){
-	            testFunctions();
+	            var cgCanvas = document.getElementById('interface_cg');
+				var cgContext = cgCanvas.getContext('2d');
+				
+				
+				//Test area
+				var testImage = new Image();
+				testImage.src = "Assets/reference/5.png";
+				
+				cgContext.drawImage(testImage, 0, 0);
             }
             
             window.onunload = function(){
 	            
             }
             
+
 		</script>
 		<script type="text/javascript" src="library/jquery-2.0.3.min.js"></script>
 		<script type="text/javascript" src="src/interface.js"></script>

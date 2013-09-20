@@ -7,11 +7,11 @@ body {
 
 #interface {
 	background-origin:border-box;
-	background-image: url(../Assets/adjusted/bigwave.jpg);
+	background-image: url(../Assets/adjusted/bigwave_0.6.jpg);
 	background-repeat: no-repeat;
 	background-size: 100% 100%;
-	opacity: 0.6; 
-	
+	opacity: 1.0; 
+	position: relative;
 }
 
 #interface_window {
@@ -20,7 +20,7 @@ body {
 }
 
 #interface_dialog {
-	position: relative;
+	position: absolute;
 	/* border: 1px solid rgba(0,0,0,0.5); */
 	background-image: url(../Assets/adjusted/dialog.png);
 	background-repeat: no-repeat;
@@ -28,4 +28,19 @@ body {
 	
 	border-radius: 32px;
 	box-shadow: 0px 0px 8px rgba(76,76,76,0.53);
+	
+	z-index: 2;
+	display: block;
+}
+
+#interface_render {
+	position: absolute;
+	z-index: 1;
+	display: block;
+}
+
+#interface_cg{
+	position: absolute;
+	z-index: 1;
+	display: block;
 }
